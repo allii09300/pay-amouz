@@ -1,0 +1,19 @@
+.InputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px */
+
+  .Label {
+    font-size: 1rem; /* 16px */
+    font-weight: 500; /* medium */
+    color: #0d0d0d;
+  }
+
+  .Input {
+    outline: none;
+    padding: 0.625rem 0.75rem; /* 10px 12px */
+    border-radius: 0.5rem; /* 8px */
+    border: 0.0625rem solid #cccccc; /* 1px */
+    font-size: 1rem; /* 16px */
+  }
+}

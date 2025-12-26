@@ -1,0 +1,90 @@
+@use "sass:string";
+
+@mixin click-scale() {
+  $animation-name: string.unique-id();
+  animation-name: $animation-name;
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 0.5rem; /* 8px */
+  border-radius: 0.625rem; /* 10px */
+  font-weight: 400; /* regular */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:active {
+      animation-duration: 0.25s;
+      animation-timing-function: ease-out;
+
+      @include click-scale {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  /* Variants */
+
+  &.Primary {
+    border: 0.625rem solid #2467ec; /* 1px */
+    background-color: #2467ec;
+    color: #f2f2f2;
+  }
+
+  &.Secondary {
+    border: 0.625rem solid #ffb013; /* 1px */
+    background-color: #ffb013;
+    color: #f2f2f2;
+  }
+
+  &.Soft {
+    border: 0.625rem solid #d3e1fb; /* 1px */
+    background-color: #d3e1fb;
+    color: #0d0d0d;
+  }
+
+  /* sizes */
+
+  &.Small {
+    padding: 0.125rem 0.5rem; /* 2px 8px */
+    font-size: 0.75rem; /* 12px */
+  }
+
+  &.Large {
+    padding: 0.25rem 1rem; /* 8px 16px */
+    font-size: 0.875rem; /* 14px */
+  }
+
+  &.Full {
+    width: 100%;
+    padding: 0.25rem 1rem; /* 12px 16px */
+    
+    font-size: 1.25rem; /* 18px */
+  }
+
+  /* disable */
+
+  &.Disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

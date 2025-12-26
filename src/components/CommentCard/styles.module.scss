@@ -1,0 +1,50 @@
+.CommentCard {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem; /* 12px */
+  align-items: flex-start;
+  padding: 3rem 1rem 1.5rem 1rem; /* 48px 32px 16px */
+  border-radius: 1.125rem; /* 18px */
+  box-shadow: 0px 0px 10px 5px #b9bce44d;
+  background-color: #e5eeff;
+
+  .UserAvatar {
+    flex-shrink: 0;
+  }
+
+  .ContentBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* 4px */
+
+    .HeaderRow {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      margin: 0.25rem 0 0 0; /* 4حط */
+      gap: 0.625rem; /* 10px */
+
+      .UserName {
+        margin: 0;
+        font-size: 1rem; /* 16px */
+        font-weight: 600; /* semi bold */
+        color: #02060d;
+      }
+
+      .UserRole {
+        margin: 0;
+        font-size: 0.875rem; /* 14px */
+        font-weight: 400; /* regular */
+        color: #808080;
+      }
+    }
+
+    .CommentText {
+      max-width: 95%;
+      line-height: 1.5;
+      font-size: 0.75rem; /* 14px */
+      font-weight: 400; /* regular */
+      color: #02060d;
+    }
+  }
+}

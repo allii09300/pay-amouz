@@ -1,0 +1,428 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .HeroSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* 32px */
+    padding: 0 1.25rem; /* 20px */
+
+    .IntroBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; /* 24px */
+
+      .Branding {
+        .AppName {
+          margin: 0;
+          font-size: 3rem; /* 48px */
+          font-weight: 900; /* Heavy */
+          color: #2467ec;
+        }
+
+        .Slogan {
+          line-height: 1.5;
+          font-size: 1.5rem; /* 24px */
+          font-weight: 800; /* extra bold */
+          color: #02060d;
+        }
+
+        .DescriptionText {
+          line-height: 1.5;
+          margin: 0;
+          font-size: 1rem; /* 16px */
+          font-weight: 400; /* regular */
+          color: #666666;
+        }
+      }
+
+      .ActionGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem; /* 12px */
+
+        .Label {
+          margin: 0;
+        }
+      }
+    }
+
+    .HeroImage {
+      margin: 0 auto;
+      width: 90%; /* 336px */
+      height: 15rem; /* 240px */
+    }
+  }
+
+  .BenefitSection {
+    .Title {
+      text-align: center;
+      line-height: 1.5;
+      font-size: 1.125rem; /* 18px */
+      font-weight: 600; /* semi bold */
+      color: #02060d;
+    }
+
+    .SubTitle {
+      text-align: center;
+      font-size: 1rem; /* 16px */
+      font-weight: 400; /* regular */
+      color: #666666;
+    }
+  }
+
+  .AudienceShowcase {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem; /* 20px */
+    gap: 4rem; /* 64px */
+  }
+
+  .ProcessSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem; /* 20px */
+    gap: 1rem; /* 16px */
+
+    .IntroColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; /* 32px */
+
+      .TitleBlock {
+        .MainHeading {
+          font-size: 1.25rem; /* 20px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+
+        .SummaryText {
+          margin: 0;
+          line-height: 1.5;
+          max-width: 90%;
+          font-size: 1.125rem; /* 18px */
+          font-weight: 400; /* regular */
+          color: #666666;
+        }
+      }
+
+      .UserFlowSelector {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto 0 0;
+        gap: 0.75rem; /* 12px */
+
+        .Label {
+          margin: 0 0.5rem; /* 8px */
+        }
+      }
+    }
+
+    .FlowLane {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem; /* 40px */
+      padding: 0.75rem 0.75rem; /* 12px */
+      border-radius: 1.25rem; /* 20px */
+      border: 0.0625rem solid #d3e1fb; /* 1px */
+      box-shadow: 0px 0px 10px 5px #b9bce44d;
+      background-color: #e5eeff;
+
+      .SequencePanel {
+        .LaneHeading {
+          font-size: 1.25rem; /* 20px */
+          font-weight: 600; /* semi bold */
+          color: #0d0d0d;
+        }
+
+        .StepList {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem; /* 8px */
+
+          .ActionItem {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5rem; /* 8px */
+            gap: 0.5rem; /* 8px */
+            border-radius: 0.75rem; /* 12px */
+            background-color: #ffffff;
+
+            .Description {
+              font-size: 0.68rem; /* 12px */
+              font-weight: 500; /* medium */
+              color: #0d0d0d;
+            }
+          }
+        }
+      }
+
+      .IllustrationImage {
+        width: 100%;
+        height: 21.25rem; /* 340px */
+      }
+    }
+  }
+
+  .CollaborationSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem; /* 20px */
+    gap: 1.5rem; /* 24px */
+
+    .SectionHeading {
+      text-align: center;
+      font-size: 1.25rem; /*20px */
+      font-weight: 600; /* semi bold */
+      color: #02060d;
+    }
+
+    .PlanGallery {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem; /* 56px */
+    }
+  }
+
+  .MetricShowcase {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* 176px */
+    padding: 0 1.25rem; /* 20px */
+    gap: 1rem; /* 16px */
+  }
+
+  .TrustSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem; /* 20px */
+    gap: 2rem; /* 32px */
+
+    .ContentColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .Heading {
+        font-size: 1.25rem; /* 20px */
+        font-weight: 600; /* semi bold */
+        color: #02060d;
+      }
+
+      .AssuranceList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* 8px */
+
+        .Item {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 0.75rem; /* 12px */
+
+          .Text {
+            margin: 0;
+            line-height: 1.7;
+            max-width: 85%;
+            transform: translateY(0.25rem); /* 4px */
+            font-size: 0.75rem; /* 12px */
+            font-weight: 400; /* regular */
+            color: #02060d;
+          }
+        }
+      }
+    }
+
+    .IllustrationAsset {
+      width: 90%;
+      max-height: 35rem; /* 560px */
+    }
+  }
+
+  .InstallmentCalculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* 32px */
+    margin: 1rem 1.25rem 0 1.25rem; /* 16px 20px */
+    padding: 1.75rem 1.5rem 1rem 1.5rem; /* 28px 24px 16px */
+    border-radius: 1.5rem; /* 24px */
+    background-color: #e5eeff;
+
+    .IntroSection {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem; /* 12px */
+
+      .MainHeading {
+        margin: 1rem 0 0 0; /* 16px */
+        font-size: 1.25rem; /* 20px */
+        font-weight: 600; /* semi bold */
+        color: #02060d;
+      }
+
+      .SubHeading {
+        margin: 0;
+        line-height: 1.5;
+        font-size: 0.875rem; /* 14px */
+        font-weight: 400; /* regular */
+        color: #666666;
+      }
+    }
+
+    .InputSection {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      .InstallmentLabel {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* 8px */
+        font-size: 1rem; /* 16px */
+        font-weight: 500; /* medium */
+        color: #0d0d0d;
+
+        .SelectBox {
+          position: relative;
+
+          .DropdownField {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            outline: none;
+            width: 100%;
+            padding: 0.7rem 0.75rem; /* 10px 12px */
+            border-radius: 0.5rem; /* 8px */
+            border: 0.0625rem solid #cccccc; /* 1px */
+
+            &::-ms-expand {
+              display: none;
+            }
+          }
+
+          .DropdownIcon {
+            position: absolute;
+            pointer-events: none;
+            top: 50%;
+            left: 0.75rem; /* 12px */
+            transform: translateY(-50%);
+            color: #999999;
+          }
+        }
+      }
+    }
+
+    .ResultSection {
+      display: flex;
+      flex-direction: row;
+      gap: 2.25rem; /* 36px */
+
+      .InstallmentSummary,
+      .PaymentSummary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .Label {
+          margin: 0;
+          font-size: 0.875rem; /* 14px */
+          font-weight: 400; /* regular */
+          color: #666666;
+        }
+
+        .Value {
+          margin: 0;
+          font-size: 2rem; /* 36px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+      }
+    }
+  }
+
+  .TestimonialSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* 32px */
+
+    .Heading {
+      text-align: center;
+      margin: 1rem 0 0 0; /* 16px */
+      font-size: 1.125rem; /* 18px */
+      font-weight: 600; /* semi bold */
+      color: #02060d;
+    }
+  }
+
+  .FAQSection {
+    padding: 2.5rem 1.25rem 0 1.25rem; /* 40px */
+    background-color: #f2f2f2;
+
+    .SectionHeading {
+      text-align: center;
+      font-size: 1.25rem; /* 20px */
+      font-weight: 600;
+      color: #02060d;
+    }
+
+    .QuestionPanel {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem; /* 40px */
+
+      .ParentsGroup,
+      .SchoolsGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .Title {
+          font-size: 1.125rem; /* 18px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+
+        .AccordionWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem; /* 16px */
+          width: 100%;
+
+          .Item {
+            padding: 1.25rem; /* 20px */
+            border-radius: 1.25rem; /* 20px */
+            border: 0.0625rem solid #d3e1fb; /* 1px */
+            background-color: #ffffff;
+            cursor: pointer;
+
+            .AcarBtn {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              justify-content: space-between;
+
+              .Label {
+                margin: auto 0;
+                line-height: 1.5;
+                max-width: 85%;
+                font-size: 0.875rem; /* 16px */
+                font-weight: 500; /* medium */
+                color: #0d0d0d;
+              }
+
+              .Icon {
+                color: #2467ec;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.PlanCard {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.25rem 1rem 1.25rem; /* 40px 20px 16px */
+  gap: 1.5rem; /* 24px */
+  border-radius: 1.25rem; /* 20px */
+  box-shadow: 0px 0px 10px 5px #b9bce44d;
+  background-color: #ffffff;
+
+  .PlanEmblem {
+    margin: 0 auto;
+  }
+
+  .Title {
+    text-align: center;
+    font-size: 1.75rem; /* 28px */
+    font-weight: 600; /* semi bold */
+    color: #02060d;
+  }
+
+  .FeatureList {
+    display: flex;
+    flex-direction: column;
+
+    .Item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.75rem; /* 12px */
+
+      .Text {
+        line-height: 1.7;
+        margin: 0.75rem 0; /* 16px */
+        transform: translateY(-0.5rem); /* 8px */
+        font-size: 1rem; /* 16px */
+        font-weight: 400; /* regular */
+        color: #02060d;
+      }
+    }
+  }
+}
+
+.RecommendedPlanCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.25rem 1rem 1.25rem; /* 40px 20px 16px */
+  gap: 1.5rem; /* 24px */
+  border-radius: 1.25rem; /* 20px */
+  box-shadow: 0px 0px 10px 5px #b9bce44d;
+  background-color: #d3e1fb;
+
+  .BadgeBanner {
+    position: absolute;
+    padding: 1.5rem 1rem; /* 24px 16px */
+    top: -2.25rem; /* 36px */
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 0.75rem; /* 12px */
+    background-color: #2467ec;
+
+    .Label {
+      margin: 0;
+      font-size: 1.125rem; /* 20px */
+      font-weight: 600; /* semi bold */
+      color: #e5eeff;
+    }
+  }
+
+  .PlanEmblem {
+    margin: 0 auto;
+  }
+
+  .Title {
+    text-align: center;
+    font-size: 1.75rem; /* 28px */
+    font-weight: 600; /* semi bold */
+    color: #02060d;
+  }
+
+  .FeatureList {
+    display: flex;
+    flex-direction: column;
+
+    .FirstItem,
+    .Item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.75rem; /* 12px */
+
+      .Text {
+        line-height: 1.7;
+        margin: 0.75rem 0; /* 16px */
+        transform: translateY(-0.5rem); /* 8px */
+        font-size: 1rem; /* 16px */
+        font-weight: 400; /* regular */
+        color: #02060d;
+      }
+    }
+
+    .FirstItem {
+      .Text {
+        max-width:70%;
+      }
+    }
+  }
+}

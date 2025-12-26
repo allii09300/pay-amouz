@@ -1,0 +1,22 @@
+.CommentSlider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .LeftControl {
+    position: absolute;
+    left: 0;
+    color: #333333;
+  }
+
+  .RightControl {
+    position: absolute;
+    right: 0;
+    color: #333333;
+  }
+
+  .CarouselSlide {
+    padding: 0.75rem 2.5rem; /* 12px 40px */
+  }
+}

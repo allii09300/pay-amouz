@@ -1,0 +1,19 @@
+@use "@fontsource-variable/vazirmatn";
+@use "modern-normalize";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Vazirmatn Variable", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E6E9F2;
+}
+
+input,
+textarea,
+button {
+  font-family: "Vazirmatn Variable", sans-serif;
+}

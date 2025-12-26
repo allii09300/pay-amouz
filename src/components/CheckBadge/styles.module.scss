@@ -1,0 +1,66 @@
+.CheckBadge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 1.75rem; /* 28px */
+  height: 1.75rem; /* 28px */
+  border-radius: 50%;
+
+  /* Variants */
+
+  &.Primary {
+    background-color: #d3e1fb;
+
+    .MarkerCore {
+      border: 0.0625rem solid #2467ec;
+      color: #2467ec;
+    }
+  }
+
+  &.Secondary {
+    background-color: #2467ec;
+
+    .MarkerCore {
+      border: 0.0625rem solid #ffffff;
+      color: #ffffff;
+    }
+  }
+
+  /* sizes */
+
+  &.Small {
+    width: 1.75rem; /* 28px */
+    height: 1.75rem; /* 28px */
+
+    .MarkerCore {
+      width: 1rem; /* 16px */
+      height: 1rem; /* 16px */
+
+      .CheckIcon {
+        width: 0.625rem; /* 10px */
+      }
+    }
+  }
+
+  &.Large {
+    width: 2.25rem; /* 36px */
+    height: 2.25rem; /* 36px */
+
+    .MarkerCore {
+      width: 1.375rem; /* 22px */
+      height: 1.375rem; /* 22px */
+
+      .CheckIcon {
+        width: 0.75rem; /* 12px */
+      }
+    }
+  }
+
+  .MarkerCore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
