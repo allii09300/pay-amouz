@@ -55,7 +55,7 @@ export default function PlanCard({
           </div>
         ))}
       </div>
-      <Button size="full">شروع همکاری مدارس <ChevronWrapper size="large"/></Button>
+      <Button style={{margin: "auto 0 0 0"}} size="full">شروع همکاری مدارس <ChevronWrapper size="large"/></Button>
     </div>
   );
 }

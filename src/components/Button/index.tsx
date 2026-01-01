@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes } from "react";
 import clsx from "clsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "soft";
+  variant?: "primary" | "secondary" | "soft" | "outlined" | "ghost" ;
   size?: "small" | "large" | "full";
 }
 
@@ -19,6 +19,8 @@ export default function Button({
     variant === "primary" && styles.Primary,
     variant === "secondary" && styles.Secondary,
     variant === "soft" && styles.Soft,
+    variant === "outlined" && styles.Outlined,
+    variant === "ghost" && styles.Ghost,
     size === "small" && styles.Small,
     size === "large" && styles.Large,
     size === "full" && styles.Full,

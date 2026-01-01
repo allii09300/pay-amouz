@@ -1,0 +1,86 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 1.125rem 1.75rem 1.125rem; /* 56px 18px 28px */
+  gap: 4rem; /* 64px */
+  background-color: #e5eeff;
+
+  .BrandBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem; /* 36px */
+
+    .BrandText {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; /* 8px */
+
+      .Paragraph {
+        margin: 0;
+        max-width: 70%;
+        line-height: 1.5;
+        font-size: 1rem; /* 16px */
+        font-weight: 400; /* regular */
+        color: #666666;
+      }
+    }
+  }
+
+  .LinkColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem; /* 36px */
+
+    .ColumnHeading {
+      margin: 0;
+      font-size: 1.25rem; /* 20px */
+      font-weight: 600; /* semi bold */
+      color: #02060d;
+    }
+
+    .LinkList {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem; /* 16px */
+
+      .NavLink {
+        text-decoration: none;
+        margin: 0;
+        font-size: 1rem; /* 16px */
+        font-weight: 400; /* regular */
+        color: #666666;
+      }
+    }
+  }
+
+  .ContactColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem; /* 36px */
+
+    .ColumnHeading {
+      margin: 0;
+      font-size: 1.25rem; /* 20px */
+      font-weight: 600; /* semi bold */
+      color: #02060d;
+    }
+
+    .SocialRow {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem 0 0; /* 16px */
+      gap: 1rem;
+    }
+  }
+
+  .Copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem; /* 16px */
+    font-weight: 400; /* regular */
+    color: #666666;
+  }
+}

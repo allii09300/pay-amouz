@@ -3,6 +3,7 @@ import { useState } from "react";
 import BooksImg from "@/assets/images/Books.png";
 import ParentImg from "@/assets/images/parent.png";
 import MobilePaymentImg from "@/assets/images/mobilePayment.png";
+import TuitionPaymentImg from "@/assets/images/tuitionPayment.png";
 import CalculatorIcon from "@/assets/icons/calculator.svg?react";
 import { ChevronDown } from "lucide-react";
 import { steps, plans, metrics, assurances, faqs } from "./data";
@@ -23,6 +24,7 @@ import {
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 
 export default function HomePage() {
@@ -136,7 +138,6 @@ export default function HomePage() {
         <div className={styles.FlowLane}>
           <div className={styles.SequencePanel}>
             <p className={styles.LaneHeading}>مسیر والدین</p>
-
             <div className={styles.StepList}>
               {steps.map((step, index) => (
                 <div className={styles.ActionItem} key={index}>
@@ -214,7 +215,6 @@ export default function HomePage() {
             value={tuition}
             onChange={handleTuitionChange}
           />
-
           <label className={styles.InstallmentLabel}>
             تعداد اقساط
             <div className={styles.SelectBox}>
@@ -236,7 +236,6 @@ export default function HomePage() {
             </div>
           </label>
         </div>
-
         <div className={styles.ResultSection}>
           <div className={styles.InstallmentSummary}>
             <p className={styles.Label}>مبلغ تقریبی هر قسط</p>
@@ -259,16 +258,15 @@ export default function HomePage() {
       </div>
       <div className={styles.FAQSection}>
         <p className={styles.SectionHeading}>سوالات پرتکرار</p>
-
         <div className={styles.QuestionPanel}>
           <div className={styles.ParentsGroup}>
             <p className={styles.Title}>برای والدین</p>
-            <Accordion className={styles.AccordionWrapper}>
-              {faqs.parents.map((question, index) => (
+            <Accordion allowZeroExpanded className={styles.AccordionWrapper}>
+              {faqs.parents.map((item, index) => (
                 <AccordionItem key={index} className={styles.Item}>
                   <AccordionItemHeading>
                     <AccordionItemButton className={styles.InquiryTrigger}>
-                      <p className={styles.EntryLabel}>{question}</p>
+                      <p className={styles.EntryLabel}>{item.question}</p>
                       <ChevronDown
                         className={styles.EntryIcon}
                         size={30}
@@ -276,31 +274,66 @@ export default function HomePage() {
                       />
                     </AccordionItemButton>
                   </AccordionItemHeading>
+                  <AccordionItemPanel className={styles.Panel}>
+                    <p className={styles.AnswerText}>{item.answer}</p>
+                  </AccordionItemPanel>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
-
           <div className={styles.SchoolsGroup}>
             <p className={styles.Title}>برای مدارس</p>
-            <Accordion className={styles.AccordionWrapper}>
-              {faqs.schools.map((question, index) => (
+            <Accordion allowZeroExpanded className={styles.AccordionWrapper}>
+              {faqs.schools.map((item, index) => (
                 <AccordionItem key={index} className={styles.Item}>
                   <AccordionItemHeading>
-                    <AccordionItemButton className={styles.EntryButton}>
-                      <p className={styles.Label}>{question}</p>
+                    <AccordionItemButton className={styles.InquiryTrigger}>
+                      <p className={styles.EntryLabel}>{item.question}</p>
                       <ChevronDown
-                        className={styles.Icon}
+                        className={styles.EntryIcon}
                         size={30}
                         strokeWidth={1}
                       />
                     </AccordionItemButton>
                   </AccordionItemHeading>
+                  <AccordionItemPanel className={styles.Panel}>
+                    <p className={styles.AnswerText}>{item.answer}</p>
+                  </AccordionItemPanel>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
         </div>
+      </div>
+      <div className={styles.ConversionBanner}>
+        <div className={styles.BannerLayout}>
+          <div className={styles.MessageBlock}>
+            <p className={styles.Headline}>
+              آماده‌اید مدرسه‌تان را به پی‌آموز متصل کنید؟
+            </p>
+            <p className={styles.Copy}>
+              فرم همکاری را ارسال کنید تا در کوتاه‌ترین زمان با شما تماس بگیریم،
+              یا همین حالا دمو را رزرو کنید.
+            </p>
+          </div>
+
+          <div className={styles.ActionGroup}>
+            <Button variant="outlined">
+              شروع همکاری مدارس
+              <ChevronWrapper variant="secondary" />
+            </Button>
+            <Button variant="ghost">
+              درخواست دمو
+              <ChevronWrapper />
+            </Button>
+          </div>
+        </div>
+
+        <img
+          className={styles.VisualAsset}
+          src={TuitionPaymentImg}
+          alt="tuition payment"
+        />
       </div>
     </div>
   );

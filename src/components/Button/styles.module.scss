@@ -11,12 +11,12 @@
 
 .Button {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   border: none;
   gap: 0.5rem; /* 8px */
   border-radius: 0.625rem; /* 10px */
-  font-weight: 400; /* regular */
+  font-weight: 500; /* medium */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   animation-duration: 0.25s;
@@ -44,39 +44,45 @@
   /* Variants */
 
   &.Primary {
-    border: 0.625rem solid #2467ec; /* 1px */
     background-color: #2467ec;
     color: #f2f2f2;
   }
 
   &.Secondary {
-    border: 0.625rem solid #ffb013; /* 1px */
     background-color: #ffb013;
     color: #f2f2f2;
   }
 
   &.Soft {
-    border: 0.625rem solid #d3e1fb; /* 1px */
     background-color: #d3e1fb;
     color: #0d0d0d;
+  }
+
+  &.Outlined {
+    background-color: #ffffff;
+    color: #2467ec;
+  }
+
+  &.Ghost {
+    background-color: transparent;
+    color: #e5eeff;
   }
 
   /* sizes */
 
   &.Small {
-    padding: 0.125rem 0.5rem; /* 2px 8px */
+    padding: 0.625rem 1.125rem; /* 10px 18px */
     font-size: 0.75rem; /* 12px */
   }
 
   &.Large {
-    padding: 0.25rem 1rem; /* 8px 16px */
+    padding: 1rem 1.25rem; /* 16px 18px */
     font-size: 0.875rem; /* 14px */
   }
 
   &.Full {
     width: 100%;
-    padding: 0.25rem 1rem; /* 12px 16px */
-    
+    padding: 0.75rem 1rem; /* 12px 16px */
     font-size: 1.25rem; /* 18px */
   }
 
