@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { useState } from "react";
-import BooksImg from "@/assets/images/Books.png";
+import BooksImg from "@/assets/images/books.png";
 import ParentImg from "@/assets/images/parent.png";
 import MobilePaymentImg from "@/assets/images/mobilePayment.png";
 import TuitionPaymentImg from "@/assets/images/tuitionPayment.png";
