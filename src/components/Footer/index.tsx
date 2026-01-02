@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
-import PayAmouzIcon from "@/assets/icons/payamouz.svg?react";
+import PayAmouzIcon from "@/assets/icons/payAmouz.svg?react";
 import PhoneIcon from "@/assets/icons/phone.svg?react";
 import MessageIcon from "@/assets/icons/message.svg?react";
 import InstaIcon from "@/assets/icons/insta.svg?react";
