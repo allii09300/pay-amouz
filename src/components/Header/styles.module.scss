@@ -1,7 +1,58 @@
 .Header {
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 3rem 1.25rem; /* 48px 20px*/
-  background-color: #E6E9F2;
+  justify-content: space-between;
+  padding-block: 1.5rem; /* 24px */
+  padding-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
+  gap: 2.5rem; /* 40px */
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #e6e9f2;
+  z-index: 1000;
+
+  .Navigation {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    transform: translateY(0.5rem); /* 8px */
+    gap: 2.5rem; /* 40px */
+    width: 100%;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    .RouteItem {
+      text-decoration: none;
+      font-size: 1.125rem; /* 18px */
+      font-weight: 400; /* regular */
+      color: #4d4d4d;
+    }
+
+    .AccessGate {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      margin-right: auto;
+      gap: 0.25rem; /* 4px */
+
+      .Label {
+        font-size: 1.125rem; /* 18px */
+        font-weight: 500; /* medium */
+        color: #2467ec;
+      }
+    }
+  }
+
+  .HamburgerMenu {
+    transform: translateY(0.2rem); /* 4px */
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 }

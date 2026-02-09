@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "soft" | "outlined" | "ghost" ;
-  size?: "small" | "large" | "full";
+  size?: "small" | "large" | "full" | "icon";
 }
 
 export default function Button({
@@ -12,6 +12,7 @@ export default function Button({
   size = "small",
   children,
   disabled = false,
+  className,
   ...props
 }: ButtonProps) {
   const classNames = clsx(
@@ -24,12 +25,13 @@ export default function Button({
     size === "small" && styles.Small,
     size === "large" && styles.Large,
     size === "full" && styles.Full,
+    size === "icon" && styles.Icon,
     disabled && styles.Disabled
   );
 
   return (
     <button
-      className={clsx(classNames, props.className)}
+      className={clsx(classNames , className)}
       disabled={disabled}
       {...props}
     >

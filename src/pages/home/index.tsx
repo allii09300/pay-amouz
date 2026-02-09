@@ -5,6 +5,7 @@ import ParentImg from "@/assets/images/parent.png";
 import MobilePaymentImg from "@/assets/images/mobilePayment.png";
 import TuitionPaymentImg from "@/assets/images/tuitionPayment.png";
 import CalculatorIcon from "@/assets/icons/calculator.svg?react";
+import TrustedSchoolIcon from "@/assets/icons/trustedSchool.svg?react";
 import { ChevronDown } from "lucide-react";
 import { steps, plans, metrics, assurances, faqs } from "./data";
 import { calculateInstallment } from "@/utils/installmentcaculator";
@@ -83,7 +84,13 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-        <img className={styles.HeroImage} src={BooksImg} alt="Books image" />
+        <img
+          className={styles.HeroImage}
+          src={BooksImg}
+          alt="Books image"
+          loading="eager"
+          decoding="async"
+        />
       </div>
       <div className={styles.BenefitSection}>
         <p className={styles.Title}>
@@ -112,7 +119,7 @@ export default function HomePage() {
           benefits={[
             { text: "امکان پرداخت شهریه در چند قسط قابل مدیریت" },
             { text: "فرایند انلاین و بدون نیاز به مراجعه حضوری" },
-            { text: "شفافیت در مجموع مبلغ، تعداد اقساط و سررسید ها" },
+            { text: "شفافیت در مجموع مبلغ، تعداد اقساط و سررسیدها" },
             { text: "یادآوری خودکار اقساط و جلوگیری از فراموشی" },
           ]}
         />
@@ -255,6 +262,19 @@ export default function HomePage() {
       <div className={styles.TestimonialSection}>
         <p className={styles.Heading}>نظرات عزیزانی که به ما اعتماد کردند</p>
         <CommentSlider />
+      </div>
+      <div className={styles.TrustShowcase}>
+        <div className={styles.IntroBlock}>
+          <p className={styles.Heading}>مدارسی که به ما اعتماد کردند</p>
+          <p className={styles.Caption}>
+            بخشی از مدارس و مجموعه هایی که از پی آموز استفاده میکنند
+          </p>
+        </div>
+        <div className={styles.LogoWall}>
+          {Array.from({ length: 7 }).map((_, index) => (
+            <TrustedSchoolIcon key={index} />
+          ))}
+        </div>
       </div>
       <div className={styles.FAQSection}>
         <p className={styles.SectionHeading}>سوالات پرتکرار</p>

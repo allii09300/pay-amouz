@@ -15,5 +15,16 @@
     border-radius: 0.5rem; /* 8px */
     border: 0.0625rem solid #cccccc; /* 1px */
     font-size: 1rem; /* 16px */
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 }

@@ -32,7 +32,7 @@ export default function AudienceCard({
       {benefits.map((item, index) => (
         <div key={index} className={styles.BenefitItem}>
           <CheckBadge/>
-
+          
           <p className={item.first ? styles.FirstStatement : styles.Statement}>
             {item.text}
           </p>

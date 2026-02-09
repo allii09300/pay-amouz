@@ -16,7 +16,6 @@
   border: none;
   gap: 0.5rem; /* 8px */
   border-radius: 0.625rem; /* 10px */
-  font-weight: 500; /* medium */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   animation-duration: 0.25s;
@@ -73,17 +72,29 @@
   &.Small {
     padding: 0.625rem 1.125rem; /* 10px 18px */
     font-size: 0.75rem; /* 12px */
+
+    @media (min-width: 768px) {
+      font-size: 0.875rem; /* 14px */ 
+    }
   }
 
   &.Large {
     padding: 1rem 1.25rem; /* 16px 18px */
     font-size: 0.875rem; /* 14px */
+
+    @media (min-width: 768px) {
+      font-size: 1rem; /* 16px */ 
+    }
   }
 
   &.Full {
     width: 100%;
     padding: 0.75rem 1rem; /* 12px 16px */
-    font-size: 1.25rem; /* 18px */
+    font-size: 0.875rem; /* 18px */
+  }
+
+  &.Icon {
+    padding: 0.5rem;
   }
 
   /* disable */

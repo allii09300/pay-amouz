@@ -1,15 +1,20 @@
 import styles from "./styles.module.scss";
+import clsx from "clsx";
 import AvatarIcon from "@/assets/icons/avatar.svg?react";
 
 interface CommentProps {
   name: string;
   role: string;
   text: string;
+  variant:"active" | "side"
 }
 
-export default function Comment({name , role , text}: CommentProps) {
+export default function Comment({name , role , text , variant}: CommentProps) {
+
   return (
-    <div className={styles.CommentCard}>
+    <div className={clsx(styles.CommentCard,
+      variant === "active" && styles.ActiveCommentCard
+    )}>
       <AvatarIcon className={styles.UserAvatar} />
       <div className={styles.ContentBlock}>
         <div className={styles.HeaderRow}>

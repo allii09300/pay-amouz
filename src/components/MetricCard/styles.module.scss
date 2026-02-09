@@ -10,7 +10,7 @@
 
   .ValueFigure {
     margin: 0;
-    font-size: 2rem; /* 32px */
+    font-size: clamp(2rem , 5vw , 4rem); /* 32px */
     font-weight: 600; /* semi bold */
     color: #02060d;
   }
@@ -20,7 +20,7 @@
     margin: 0;
     max-width: 80%;
     line-height: 1.5;
-    font-size: 1rem; /* 16px */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* 16px 20px */
     font-weight: 600; /* semi bold */
     color: #02060d;
   }
@@ -28,10 +28,9 @@
   .VisualGlyph {
     display: flex;
     justify-content: center;
-    width: 100%;
     
     @media (min-width: 768px) {
-      height: 7rem; /* 112px */
+      height: 6rem; /* 96px */
     }
   }
 }

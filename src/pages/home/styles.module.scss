@@ -1,17 +1,16 @@
 .Home {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: clamp(3rem, 7vw, 6.5rem); /* 48px 108px */
 
   .HeroSection {
     display: flex;
     flex-direction: column;
+    padding-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
     gap: 2rem; /* 32px */
-    padding: 0 1.25rem; /* 20px */
 
     @media (min-width: 768px) {
       flex-direction: row;
-      padding: 0 2.5rem; /* 40px */
     }
 
     .IntroBlock {
@@ -22,14 +21,14 @@
       .Branding {
         .AppName {
           margin: 0;
-          font-size: 3rem; /* 48px */
+          font-size: clamp(3rem, 6vw, 4.5rem); /* 48px 72px */
           font-weight: 900; /* Heavy */
           color: #2467ec;
         }
 
         .Slogan {
           line-height: 1.5;
-          font-size: 1.5rem; /* 24px */
+          font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* 24px 40px */
           font-weight: 800; /* extra bold */
           color: #02060d;
         }
@@ -56,8 +55,13 @@
     }
 
     .HeroImage {
+      width: 90%;
+      height: auto;
       margin: 0 auto;
-      width: 90%; /* 336px */
+
+      @media (min-width: 768px) {
+        max-width: clamp(20rem, 35vw, 30rem);
+      }
     }
   }
 
@@ -65,7 +69,7 @@
     .Title {
       text-align: center;
       line-height: 1.5;
-      font-size: 1.125rem; /* 18px */
+      font-size: clamp(1.125rem, 3vw, 1.75rem); /* 18px 28px */
       font-weight: 600; /* semi bold */
       color: #02060d;
     }
@@ -79,35 +83,38 @@
   }
 
   .AudienceShowcase {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.25rem; /* 20px */
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-inline: clamp(1.25rem, 5vw, 2.5rem); /* 20px 40px */
     gap: 3.3rem; /* 64px */
 
     @media (min-width: 768px) {
-      flex-direction: row;
-      padding: 0 2.5rem; /* 40px */
+      grid-template-columns: repeat(2 , 1fr);
+      padding-inline: clamp(3.25rem, 6.75vw, 5rem); /* 20px 80px */
+      gap: clamp(2.25rem, 4.5vw, 5rem); /* 36px 80px */
     }
   }
 
   .ProcessSection {
     display: flex;
     flex-direction: column;
-    padding: 0 1.25rem; /* 20px */
+    padding-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
     gap: 1rem; /* 16px */
-
-    @media (min-width: 768px) {
-      padding: 0 2.5rem; /* 40px */
-    }
 
     .IntroColumn {
       display: flex;
       flex-direction: column;
       gap: 2rem; /* 32px */
 
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 0;
+      }
+
       .TitleBlock {
         .MainHeading {
-          font-size: 1.25rem; /* 20px */
+          font-size: clamp(1.25rem, 3vw, 1.75rem); /* 20px 28px*/
           font-weight: 600; /* semi bold */
           color: #02060d;
         }
@@ -119,6 +126,11 @@
           font-size: 1.125rem; /* 18px */
           font-weight: 400; /* regular */
           color: #666666;
+
+          @media (min-width: 1024px) {
+            line-height: 1;
+            max-width: none;
+          }
         }
       }
 
@@ -138,43 +150,64 @@
     .FlowLane {
       display: flex;
       flex-direction: column;
-      gap: 2rem; /* 32px */
-      padding: 0.75rem 0.75rem; /* 12px */
+      gap: clamp(2rem, 5.5vw, 5rem); /* 32px 64px */
+      padding: clamp(0.75rem, 4vw, 2rem); /* 12px 32px */
       border-radius: 1.25rem; /* 20px */
       border: 0.0625rem solid #d3e1fb; /* 1px */
       box-shadow: 0 0 10px 5px #b9bce44d;
       background-color: #e5eeff;
 
-      .LaneHeading {
-        font-size: 1.25rem; /* 20px */
-        font-weight: 600;
-        color: #0d0d0d;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-end;
+        padding-inline: clamp(2rem, 4vw, 4rem); /* 32px 64px */
+        padding-bottom: clamp(3rem, 6.25vw, 4rem); /* 48px 64px */
       }
 
-      .StepList {
+      .SequencePanel {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem; /* 8px */
+        gap: clamp(1.25rem, 5.5vw, 2rem);
+        width: 100%;
 
-        .ActionItem {
+        .LaneHeading {
+          margin: 0;
+          font-size: 1.25rem; /* 20px */
+          font-weight: 600;
+          color: #0d0d0d;
+        }
+
+        .StepList {
           display: flex;
-          align-items: center;
-          padding: 0.5rem; /* 8px */
+          flex-direction: column;
           gap: 0.5rem; /* 8px */
-          border-radius: 0.75rem;
-          background-color: #ffffff;
 
-          .Description {
-            font-size: 0.68rem; 
-            font-weight: 500;
-            color: #0d0d0d;
+          .ActionItem {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem; /* 8px */
+            gap: 0.5rem; /* 8px */
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0px 10px 10px #b9bce44d;
+            background-color: #ffffff;
+
+            .Description {
+              font-size: clamp(0.65rem, 1.5vw, 1.25rem); /* 10px 20px */
+              font-weight: 500;
+              color: #0d0d0d;
+            }
           }
         }
       }
 
       .IllustrationImage {
-        width: 100%;
-        height: 21.25rem; /* 340px */
+        height: auto;
+
+        @media (min-width: 768px) {
+          width: 17rem;
+          border-radius: 3rem; /* 48px */
+          aspect-ratio: 1/1;
+        }
       }
     }
   }
@@ -182,12 +215,8 @@
   .CollaborationSection {
     display: flex;
     flex-direction: column;
-    padding: 0 1.25rem; /* 20px */
+    padding-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
     gap: 1.5rem; /* 24px */
-
-    @media (min-width: 768px) {
-      padding: 0 2.5rem; /* 40px */
-    }
 
     @media (min-width: 1024px) {
       gap: 6rem; /* 96px */
@@ -195,18 +224,18 @@
 
     .SectionHeading {
       text-align: center;
-      font-size: 1.25rem; /*20px */
+      font-size: clamp(1.25rem, 3vw, 1.75rem); /*20px */
       font-weight: 600; /* semi bold */
       color: #02060d;
     }
 
     .PlanGallery {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 3.5rem; /* 56px */
 
       @media (min-width: 1024px) {
-        flex-direction: row;
+        grid-template-columns: repeat(3 , 1fr);
         gap: 0.875rem; /* 14px */
       }
     }
@@ -216,26 +245,24 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 1.25rem; /* 20px */
+    padding-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
     gap: 1rem; /* 16px */
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(4, 1fr);
-      padding: 0 2.5rem; /* 40px */
     }
   }
 
   .TrustSection {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 0 1.25rem; /* 20px */
+    padding-inline: clamp(1.25rem, 5vw, 2.5rem); /* 20px 40px */
     gap: 2rem; /* 32px */
 
     @media (min-width: 768px) {
       flex-direction: row;
-      gap: 3rem; /* 48px */
-      padding: 0 5rem; /* 80px */
+      align-items: center;
+      padding-inline: clamp(3rem, 10.45vw, 12rem); /* 20px 40px */
     }
 
     .ContentColumn {
@@ -244,11 +271,11 @@
       gap: 1rem; /* 16px */
 
       @media (min-width: 768px) {
-        margin: 1.75rem 0 0 0; /* 28px */
+        margin-bottom: clamp(1.75rem, 3.6vw, 4rem); /* 28px 64px */
       }
 
       .Heading {
-        font-size: 1.25rem; /* 20px */
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px 28px */
         font-weight: 600; /* semi bold */
         color: #02060d;
       }
@@ -268,8 +295,8 @@
             margin: 0;
             line-height: 1.7;
             max-width: 80%;
-            transform: translateY(0.25rem); /* 4px */
-            font-size: 0.75rem; /* 12px */
+            transform: translateY(0.125rem); /* 2px */
+            font-size: clamp(0.75rem, 1.4vw, 1.25rem); /* 12px 20px */
             font-weight: 400; /* regular */
             color: #02060d;
           }
@@ -279,11 +306,9 @@
 
     .IllustrationAsset {
       width: 90%;
-      max-height: 35rem; /* 560px */
 
       @media (min-width: 768px) {
-        max-width: 16rem; /* 256px */
-        height: 21rem; /* 336px */
+        max-width: clamp(16rem, 30vw, 30rem); /* 256px 480px */
       }
     }
   }
@@ -292,19 +317,29 @@
     display: flex;
     flex-direction: column;
     gap: 2rem; /* 32px */
-    margin: 1rem 1.25rem 0 1.25rem; /* 16px 20px */
-    padding: 1.75rem 1.5rem 1rem 1.5rem; /* 28px 24px 16px */
+    margin-inline: clamp(1.25rem, 5vw, 4rem); /* 20px 64px */
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
     border-radius: 1.5rem; /* 24px */
     background-color: #e5eeff;
+
+    @media (min-width: 950px) {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
 
     .IntroSection {
       display: flex;
       flex-direction: column;
       gap: 0.75rem; /* 12px */
 
+      @media (min-width: 950px) {
+        max-width: 30%;
+      }
+
       .MainHeading {
         margin: 1rem 0 0 0; /* 16px */
-        font-size: 1.25rem; /* 20px */
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px 28px */
         font-weight: 600; /* semi bold */
         color: #02060d;
       }
@@ -312,7 +347,7 @@
       .SubHeading {
         margin: 0;
         line-height: 1.5;
-        font-size: 0.875rem; /* 14px */
+        font-size: clamp(0.875rem, 1.4vw, 1.125rem); /* 14px 18px */
         font-weight: 400; /* regular */
         color: #666666;
       }
@@ -322,6 +357,10 @@
       display: flex;
       flex-direction: column;
       gap: 1.25rem; /* 20px */
+
+      @media (min-width: 950px) {
+        gap: 2rem; /* 32px */
+      }
 
       .InstallmentLabel {
         display: flex;
@@ -366,16 +405,25 @@
       flex-direction: row;
       gap: 2.25rem; /* 36px */
 
+      @media (min-width: 950px) {
+        flex-direction: column;
+        gap: 2rem; /* 48px */
+      }
+
       .InstallmentSummary,
       .PaymentSummary {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1.5rem; /* 24px */
+
+        @media (min-width: 950px) {
+          gap: 0.75rem;
+        }
 
         .Label {
           margin: 0;
-          font-size: 0.875rem; /* 14px */
+          font-size: clamp(0.875rem, 1.4vw, 1.125rem); /* 14px 18px */
           font-weight: 400; /* regular */
           color: #666666;
         }
@@ -398,27 +446,77 @@
     .Heading {
       text-align: center;
       margin: 1rem 0 0 0; /* 16px */
-      font-size: 1.125rem; /* 18px */
+      font-size: clamp(1.125rem, 2.5vw, 1.75rem); /* 18px 28px */
       font-weight: 600; /* semi bold */
       color: #02060d;
     }
   }
 
+  .TrustShowcase {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding-inline: clamp(3.5rem, 7.5vw, 7rem); /* 20px 64px */
+      gap: 0.5rem; /* 8px */
+
+      .IntroBlock {
+        .Heading {
+          margin: 0;
+          text-align: center;
+          font-size: clamp(1.125rem, 2.5vw, 1.75rem); /* 18px 28px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+
+        .Caption {
+          text-align: center;
+          font-size: clamp(0.875rem, 2vw, 1.125rem); /* 14px 18px */
+          font-weight: 400;
+          color: #666666;
+        }
+      }
+
+      .LogoWall {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
   .FAQSection {
-    padding: 2.5rem 1.25rem 2.5rem 1.25rem; /* 40px 20px */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* 40px */
+    padding-inline: clamp(1.25rem, 5vw, 3.25rem); /* 20px 52px */
+    padding-block: 3rem; /* 48px */
     background-color: #f2f2f2;
 
+    @media (min-width: 1024px) {
+      padding-inline: clamp(3.25rem, 8vw, 6rem); /* 52px 96px */
+      padding-block: 4rem 6rem; /* 64px 96px */
+    }
+
     .SectionHeading {
+      margin: 0;
       text-align: center;
-      font-size: 1.25rem; /* 20px */
+      font-size: clamp(1.25rem , 2.5vw , 1.75rem); /* 20px 28px */
       font-weight: 600;
       color: #02060d;
     }
 
     .QuestionPanel {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 2.5rem; /* 40px */
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 1rem;
+      }
 
       .ParentsGroup,
       .SchoolsGroup {
@@ -439,6 +537,7 @@
           width: 100%;
 
           .Item {
+            position: relative;
             padding: 1.25rem; /* 20px */
             border-radius: 1.25rem; /* 20px */
             border: 0.0625rem solid #d3e1fb; /* 1px */
@@ -458,9 +557,15 @@
                 font-size: 0.875rem; /* 16px */
                 font-weight: 500; /* medium */
                 color: #0d0d0d;
+
+                @media (min-width: 1024px) {
+                  font-size: clamp(0.75rem, 1.1vw, 0.875rem); /* 16px */
+                  max-width: none;
+                }
               }
 
               .EntryIcon {
+                margin: 0;
                 color: #2467ec;
               }
 
@@ -480,6 +585,10 @@
                 font-size: 0.875rem; /* 14px */
                 line-height: 1.75;
                 color: #666666;
+
+                @media (min-width: 1024px) {
+                  font-size: clamp(0.75rem, 1.2vw, 0.875rem); /* 12px 14px */
+                }
               }
             }
           }
@@ -489,15 +598,27 @@
   }
 
   .ConversionBanner {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem; /* 16px */
-    padding: 1.25rem 1.5rem; /* 24px 20px */
-    margin: 0 2.5rem -1.5rem 2.5rem; /* 40px */
+    padding-inline: clamp(1.5rem , 4vw , 2.5rem); /* 24px 40px */
+    padding-block: clamp(1.25rem , 3vw , 1.75rem); /* 20px */
+    margin-inline: clamp(2.5rem , 10vw , 8rem); /* 40px 128px */
+    margin-bottom: -1.5rem; /* 24px */
     border-radius: 1.25rem; /* 20px */
     box-shadow: 0px 15px 35px 10px #417bee80;
     background-color: #2467ec;
     z-index: 2;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-top: 2rem; /* 32px */
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: -3rem; /* 48px */
+    }
 
     .BannerLayout {
       display: flex;
@@ -513,7 +634,7 @@
           margin: 0;
           max-width: 90%;
           line-height: 1.5;
-          font-size: 1.25rem; /* 20px */
+          font-size: clamp(1.25rem , 2.25vw , 1.75rem); /* 20px */
           font-weight: 600; /* semi bold */
           color: #e5eeff;
         }
@@ -521,9 +642,13 @@
         .Copy {
           margin: 0;
           line-height: 1.5;
-          font-size: 0.875rem; /* 14px */
+          font-size: clamp(0.875rem , 1.5vw , 1.125rem); /* 14px 18px */
           font-weight: 400; /* regular */
           color: #e5eeff;
+
+          @media (min-width: 768px) {
+            max-width: 65%;
+          }
         }
       }
 
@@ -532,7 +657,26 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem; /* 16px */
+
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+      }
+    }
+
+    .VisualAsset {
+      width: 100%;
+      max-width: 16rem; /* 256px */
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        position: absolute;
+        max-width: clamp(13rem , 23vw , 15.5rem); /* 208px 248px */
+        left: 1.25rem; /* 20px */
+        bottom: 2rem; /* 32px */
       }
     }
   }
 }
+
+

@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   overflow-x: hidden;
   direction: rtl;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 8.5rem auto 0 auto;
   -webkit-tap-highlight-color: transparent;
   z-index: 0;
 

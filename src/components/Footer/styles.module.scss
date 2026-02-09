@@ -1,78 +1,124 @@
 .Footer {
   display: flex;
   flex-direction: column;
-  padding: 3.5rem 1.125rem 1.75rem 1.125rem; /* 56px 18px 28px */
+  padding-inline: clamp(1.25rem, 6vw, 5rem); /* 20px 80px */
+  padding-block: 3.25rem 1.75rem; /* 96px 28px */
   gap: 4rem; /* 64px */
   background-color: #e5eeff;
 
-  .BrandBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem; /* 36px */
-
-    .BrandText {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem; /* 8px */
-
-      .Paragraph {
-        margin: 0;
-        max-width: 70%;
-        line-height: 1.5;
-        font-size: 1rem; /* 16px */
-        font-weight: 400; /* regular */
-        color: #666666;
-      }
-    }
+  @media (min-width: 1024px) {
+    padding-top: 6rem; /* 96px */
   }
 
-  .LinkColumn {
+  .ContentStructure {
     display: flex;
     flex-direction: column;
-    gap: 2.25rem; /* 36px */
+    justify-content: flex-start;
+    gap: 3rem; /* 48px */
 
-    .ColumnHeading {
-      margin: 0;
-      font-size: 1.25rem; /* 20px */
-      font-weight: 600; /* semi bold */
-      color: #02060d;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 0;
     }
 
-    .LinkList {
+    .BrandBlock {
       display: flex;
       flex-direction: column;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 1rem; /* 16px */
+      flex: 1;
+      gap: 2.25rem; /* 36px */
 
-      .NavLink {
-        text-decoration: none;
-        margin: 0;
-        font-size: 1rem; /* 16px */
-        font-weight: 400; /* regular */
-        color: #666666;
+      .Emblem {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 3.5rem;
+
+        @media (min-width: 1024px) {
+          .MarkIcon {
+            transform: translateX(0.75rem); /* 8px */
+          }
+        }
+      }
+
+      .BrandText {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* 8px */
+
+        .Paragraph {
+          margin: 0;
+          max-width: 85%;
+          line-height: 1.5;
+          font-size: 0.875rem; /* 16px */
+          font-weight: 400; /* regular */
+          color: #666666;
+        }
       }
     }
-  }
 
-  .ContactColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem; /* 36px */
-
-    .ColumnHeading {
-      margin: 0;
-      font-size: 1.25rem; /* 20px */
-      font-weight: 600; /* semi bold */
-      color: #02060d;
-    }
-
-    .SocialRow {
+    .LinkColumn {
       display: flex;
       flex-direction: column;
-      padding: 0 1rem 0 0; /* 16px */
-      gap: 1rem;
+      flex: 1;
+      gap: 2.25rem; /* 36px */
+
+      .HeadingSlot {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 3.5rem;
+
+        .Title {
+          margin: 0;
+          font-size: 1.25rem; /* 20px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+      }
+
+      .LinkList {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem; /* 16px */
+
+        .NavLink {
+          text-decoration: none;
+          margin: 0;
+          font-size: 0.875rem; /* 16px */
+          font-weight: 400; /* regular */
+          color: #666666;
+        }
+      }
+    }
+
+    .ContactColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem; /* 36px */
+
+      .HeadingSlot {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 3.5rem;
+
+        .Title {
+          margin: 0;
+          font-size: 1.25rem; /* 20px */
+          font-weight: 600; /* semi bold */
+          color: #02060d;
+        }
+      }
+
+      .SocialRow {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 0 0; /* 16px */
+        gap: 1rem;
+      }
     }
   }
 

@@ -29,59 +29,69 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className={styles.Footer}>
-      <div className={styles.BrandBlock}>
-        <PayAmouzIcon />
-
-        <div className={styles.BrandText}>
-          <p className={styles.Paragraph}>
-            توضیح یک پاراگراف کوتاه (۲–۳ خط) درباره مأموریت و حوزه فعالیت
-          </p>
-          <p className={styles.Paragraph}>
-            توضیح یک پاراگراف کوتاه (۲–۳ خط) درباره مأموریت و حوزه فعالیت
-          </p>
+      <div className={styles.ContentStructure}>
+        <div className={styles.BrandBlock}>
+          <div className={styles.Emblem}>
+            <PayAmouzIcon className={styles.MarkIcon} />
+          </div>
+          <div className={styles.BrandText}>
+            <p className={styles.Paragraph}>
+              توضیح یک پاراگراف کوتاه (۲–۳ خط) درباره مأموریت و حوزه فعالیت
+            </p>
+            <p className={styles.Paragraph}>
+              توضیح یک پاراگراف کوتاه (۲–۳ خط) درباره مأموریت و حوزه فعالیت
+            </p>
+          </div>
         </div>
-      </div>
-      <nav className={styles.LinkColumn}>
-        <p className={styles.ColumnHeading}>راهنما</p>
+        <nav className={styles.LinkColumn}>
+          <div className={styles.HeadingSlot}>
+            <p className={styles.Title}>راهنما</p>
+          </div>
 
-        <ul className={styles.LinkList}>
-          {guideLinks.map((item) => (
-            <li key={item.path}>
-              <Link className={styles.NavLink} to={item.path}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <nav className={styles.LinkColumn}>
-        <p className={styles.ColumnHeading}>قوانین و سیاست‌ها</p>
+          <ul className={styles.LinkList}>
+            {guideLinks.map((item) => (
+              <li key={item.path}>
+                <Link className={styles.NavLink} to={item.path}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <ul className={styles.LinkList}>
-          {policyLinks.map((item) => (
-            <li key={item.path}>
-              <Link className={styles.NavLink} to={item.path}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className={styles.ContactColumn}>
-        <p className={styles.ColumnHeading}>پشتیبانی و شبکه‌های اجتماعی</p>
+        <nav className={styles.LinkColumn}>
+          <div className={styles.HeadingSlot}>
+            <p className={styles.Title}>قوانین و سیاست‌ها</p>
+          </div>
 
-        <div className={styles.SocialRow}>
-          {socialLinks.map(({ icon: Icon, href }, index) => (
-            <a
-              key={index}
-              href={href}
-              className={styles.Link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon />
-            </a>
-          ))}
+          <ul className={styles.LinkList}>
+            {policyLinks.map((item) => (
+              <li key={item.path}>
+                <Link className={styles.NavLink} to={item.path}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className={styles.ContactColumn}>
+          <div className={styles.HeadingSlot}>
+            <p className={styles.Title}>پشتیبانی و شبکه‌های اجتماعی</p>
+          </div>
+
+          <div className={styles.SocialRow}>
+            {socialLinks.map(({ icon: Icon, href }, index) => (
+              <a
+                key={index}
+                href={href}
+                className={styles.Link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
       <p className={styles.Copyright}>© ۱۴۰۴ پی‌آموز — تمامی حقوق محفوظ است</p>

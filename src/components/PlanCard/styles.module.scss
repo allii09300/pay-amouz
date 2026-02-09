@@ -1,6 +1,5 @@
 .PlanCard {
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding: 2.5rem 1.25rem 1rem 1.25rem; /* 40px 20px 16px */
   gap: 1.5rem; /* 24px */
@@ -18,7 +17,7 @@
 
   .Title {
     text-align: center;
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.5rem; /* 24px */
     font-weight: 600; /* semi bold */
     color: #02060d;
   }
@@ -36,8 +35,8 @@
       .Text {
         line-height: 1.7;
         margin: 0.75rem 0; /* 16px */
-        transform: translateY(-0.5rem); /* 8px */
-        font-size: 1rem; /* 16px */
+        transform: translateY(-0.4rem); /* 8px */
+        font-size: clamp(0.875rem, 1.4vw, 1.125rem); /* 14px 18px */
         font-weight: 400; /* regular */
         color: #02060d;
       }
@@ -48,7 +47,6 @@
 .RecommendedPlanCard {
   position: relative;
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding: 2.5rem 1.25rem 1rem 1.25rem; /* 40px 20px 16px */
   gap: 1.5rem; /* 24px */
@@ -103,8 +101,8 @@
       .Text {
         line-height: 1.7;
         margin: 0.75rem 0; /* 16px */
-        transform: translateY(-0.5rem); /* 8px */
-        font-size: 1rem; /* 16px */
+        transform: translateY(-0.4rem); /* 8px */
+        font-size: clamp(0.875rem, 1.4vw, 1.125rem); /* 14px 18px */
         font-weight: 400; /* regular */
         color: #02060d;
       }
